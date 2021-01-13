@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     checkout scm
-                    dockerImage = docker.build("my-image:${env.BUILD_ID}", "-f Dockerfile ./initial") 
+                    dockerImage = docker.build("my-image:${env.BUILD_ID}", "-f ./initial/Dockerfile") 
                 }
             }
         }
