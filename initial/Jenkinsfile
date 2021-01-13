@@ -8,7 +8,7 @@ pipeline {
         stage ('Initialize') {
             steps {
                 script {
-                    dockerImage = docker.build("my-image:${env.BUILD_ID}", "-f ${dockerfile} ./initial/Dockerfile") 
+                    dockerImage = docker.build("my-image:${env.BUILD_ID}", "-f ./initial/Dockerfile") 
                 }
             }
         }
